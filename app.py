@@ -7,7 +7,7 @@ from PIL import Image
 html_content = """
 <div style="width: 100%; clear: both; display: flex; align-items: center; justify-content: space-between;">
     <div style="width: 50%; display: flex; justify-content: flex-start;">
-        <img src="https://www.bing.com/images/blob?bcid=suFss51W2wgIpA" style="width: 100%; max-width: 500px; height: auto;">
+        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 500px; height: auto;">
     </div>
     <div style="width: 50%; text-align: right; padding-left: 0px;">
         <p style="margin: 0px; font-weight: bold;">Laboratorio de Tecnologías Emergentes</p>

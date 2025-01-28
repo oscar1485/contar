@@ -1,5 +1,0 @@
-streamlit
-opencv-python=4.10.0
-numpy
-mahotas
-Pillow

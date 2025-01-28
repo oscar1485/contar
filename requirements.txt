@@ -1,9 +1,6 @@
 streamlit
 opencv-python
+opencv-python-headless
 numpy
 mahotas
 Pillow
-libglib2.0-0
-libsm6
-libxrender1
-libxext6

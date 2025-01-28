@@ -7,7 +7,7 @@ from PIL import Image
 html_content = """
 <div style="width: 100%; clear: both; display: flex; align-items: center; justify-content: space-between;">
     <div style="width: 50%; display: flex; justify-content: flex-start;">
-        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 00px; height: auto;">
+        <img src="logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 00px; height: auto;">
     </div>
     <div style="width: 50%; text-align: right; padding-left: 0px;">
         <p style="margin: 0px; font-weight: bold;">Laboratorio de Tecnologías Emergentes</p>
@@ -18,6 +18,8 @@ html_content = """
     </div>
 </div>
 """
+
+
 
 def contar_colonias(imagen):
     """
@@ -98,7 +100,9 @@ st.subheader("Ejemplo de Imagen de Muestra")
 st.markdown("""
 A continuación, se presenta un ejemplo de imagen que debe ser subida. Esta imagen muestra un contenedor donde se están estudiando las bacterias.
 """)
-st.image("prueba_2_1.jpeg", caption="Imagen de ejemplo: Imagen de Prueba", width=100, use_container_width=True)
+#st.image("prueba_2_1.jpeg", caption="Imagen de ejemplo: Imagen de Prueba", width=100, use_container_width=True)
+
+
 
 # Subir imagen
 imagen_subida = st.file_uploader("Sube una imagen de las colonias bacterianas", type=["jpg", "jpeg", "png"])

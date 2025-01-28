@@ -7,7 +7,7 @@ from PIL import Image
 html_content = """
 <div style="width: 100%; clear: both; display: flex; align-items: center; justify-content: space-between;">
     <div style="width: 50%; display: flex; justify-content: flex-start;">
-        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 500px; height: auto;">
+        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 00px; height: auto;">
     </div>
     <div style="width: 50%; text-align: right; padding-left: 0px;">
         <p style="margin: 0px; font-weight: bold;">Laboratorio de Tecnologías Emergentes</p>
@@ -19,20 +19,9 @@ html_content = """
 </div>
 """
 
-
-
-
-
-
 def contar_colonias(imagen):
     """
     Cuenta y clasifica colonias bacterianas en una imagen, incluyendo variantes de azul y rojo.
-
-    Args:
-        imagen: La imagen a procesar.
-
-    Returns:
-        Una tupla con el número de colonias azules y rojas, y la imagen resaltada.
     """
     # Convertir a espacio de color HSV
     hsv = cv2.cvtColor(imagen, cv2.COLOR_BGR2HSV)
@@ -78,9 +67,7 @@ def contar_colonias(imagen):
     return num_colonias_azules, num_colonias_rojas, imagen_resaltada
 
 # Configuración de la página
-
 st.set_page_config(page_title="Contador de Colonias Bacterianas", layout="wide")
-
 
 # Descripción del proyecto
 st.markdown(html_content, unsafe_allow_html=True)
@@ -95,9 +82,23 @@ Sube una imagen para procesarla y obtener un conteo visual de las colonias detec
 - Oscar Augusto Diaz Triana
 - Fernando Gutierrez Portela
 - Oscar Efren Ospina
-
-
 """)
+
+# Recomendaciones sobre la imagen
+st.subheader("Recomendaciones para la Imagen")
+st.markdown("""
+- Asegúrate de que la imagen esté bien iluminada y enfocada. Esto es fundamental para mejorar la precisión del conteo.
+- Las imágenes con alto contraste entre las colonias bacterianas y el fondo tienen mejores resultados.
+- Evita imágenes borrosas o con resolución muy baja, ya que pueden dificultar la identificación de las colonias.
+- El contenedor donde se encuentran las bacterias debe ser visible claramente, sin distorsiones en la imagen.
+""")
+
+# Ejemplo de imagen de muestra
+st.subheader("Ejemplo de Imagen de Muestra")
+st.markdown("""
+A continuación, se presenta un ejemplo de imagen que debe ser subida. Esta imagen muestra un contenedor donde se están estudiando las bacterias.
+""")
+st.image("prueba_2_1.jpeg", caption="Imagen de ejemplo: Imagen de Prueba", width=100, use_container_width=True)
 
 # Subir imagen
 imagen_subida = st.file_uploader("Sube una imagen de las colonias bacterianas", type=["jpg", "jpeg", "png"])
@@ -134,4 +135,3 @@ st.markdown("""
     Facultad de Ingeniería 2025
 </p>
 """, unsafe_allow_html=True)
-
